@@ -60,7 +60,7 @@
 
 \begin{document}
 
-% --- Pages d'introduction -----------------------------------------------------
+% --- Pages de garde et mentions obligatoires ----------------------------------
 
 \frontmatter
 
@@ -79,7 +79,7 @@
 
 % Résumés
 % -------
-% ... en français
+% En français
 \begin{french}
 \input{contenu/abstract-french}
 \end{french}
@@ -96,19 +96,43 @@
 \cleardoubleoddpage
 
 
-% Table des matières
-\tableofcontents
+% --- Titres et introduction ---------------------------------------------------
 
 \mainmatter
 
+% Page de titre
+% -------------
+
+% Colophon et licence
+% -------------------
+
+% Remerciements
+% -------------
+
+% Table des matières
+% ------------------
+\tableofcontents
+
+% Introduction
+% ------------
+
 \lipsum[1-12]
+
+
+% --- Partie 1 -----------------------------------------------------------------
+
+
+% --- Annexes ------------------------------------------------------------------
 
 \appendix
 
-\lipsum[1-12]
-
 \backmatter
 
-\lipsum[1-12]
+% Bibliographie
+% -------------
+
+% Index
+% -----
+
 
 \end{document}
