@@ -1,0 +1,53 @@
+% ------------------------------------------------------------------------------
+% |                    FORMATAGE POUR LA PAGE DE GARDE AMU                     |
+% ------------------------------------------------------------------------------
+
+% --- Polices ------------------------------------------------------------------
+
+\makeatletter
+\newfontface\tit@el{Titillium-ExtraLight.ttf}[
+	Path	= ./latexamu-intro/fonts/,
+	Scale	= 1.1
+]
+\newfontface\tit@l{Titillium-Light.ttf}[
+	Path	= ./latexamu-intro/fonts/,
+	Scale	= 1.1
+]
+\newfontface\tit@m{Titillium-Regular.ttf}[
+	Path	= ./latexamu-intro/fonts/,
+	Scale	= 1.1
+]
+\newfontface\tit@sb{Titillium-SemiBold.ttf}[
+	Path	= ./latexamu-intro/fonts/,
+	Scale	= 1.1
+]
+\newfontface\tit@b{Titillium-Bold.ttf}[
+	Path	= ./latexamu-intro/fonts/,
+	Scale	= 1.1
+]
+\newcommand{\titel}[1]{{\tit@el #1}}
+\newcommand{\titl}[1]{{\tit@l #1}}
+\newcommand{\titm}[1]{{\tit@m #1}}
+\newcommand{\titsb}[1]{{\tit@sb #1}}
+\newcommand{\titb}[1]{{\tit@b #1}}
+
+\newcommand\HUGE{\@setfontsize\Huge{28}{0}}
+\makeatother
+
+% --- Couleurs -----------------------------------------------------------------
+
+\definecolor{blueamu}{RGB}{0, 101, 189}
+\definecolor{cyanamu}{RGB}{61, 183, 228}
+
+% --- Tikz ---------------------------------------------------------------------
+
+\usetikzlibrary{decorations.markings}
+
+\newcommand{\dhorline}[3][0]{%
+    \tikz[baseline=-2pt]{\path[decoration={markings, 
+      mark=between positions 0 and 1 step 2*#3
+      with {\node[color=blueamu, fill, circle, minimum width=#3, inner sep=0pt, anchor=south west] {};}},postaction={decorate}]  (0,#1) -- ++(#2,0);}}
+\newcommand{\dvertline}[3][0]{%
+    \tikz[baseline=2em]{\path[decoration={markings,
+      mark=between positions 0 and 1 step 2*#2
+      with {\node[color=black!50, fill, circle, minimum width=#2, inner sep=0pt, anchor=south west] {};}},postaction={decorate}] (0, #1) -- ++(0,#3);}} 
