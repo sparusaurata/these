@@ -33,6 +33,13 @@
 
 % --- Graphismes ---------------------------------------------------------------
 
+\usepackage{tikz}
+
+% Dossiers où chercher les graphiques
+\graphicspath{{latexamu-intro/logo/}}
+
+% Formatage pour la page de garde AMU
+\input{preambule/formatage-amu}
 
 
 % --- Mathématiques ------------------------------------------------------------
@@ -57,7 +64,40 @@
 
 \frontmatter
 
-\lipsum[1-12]
+% Page de garde AMU
+% -----------------
+\begin{french}
+\input{latexamu-intro/tex/titre}
+\end{french}
+\cleardoubleoddpage
+
+% Attestation sous serment
+% ------------------------
+\chapter*{Affidavit}
+\input{latexamu-intro/tex/affidavit}
+\cleardoubleoddpage
+
+% Résumés
+% -------
+% ... en français
+\begin{french}
+\input{contenu/abstract-french}
+\end{french}
+\cleardoubleoddpage
+% ... et en anglais
+\input{contenu/abstract-english}
+\cleardoubleoddpage
+
+% Publications liées à la thèse
+% -----------------------------
+\begin{french}
+\input{contenu/publis-confs}
+\end{french}
+\cleardoubleoddpage
+
+
+% Table des matières
+\tableofcontents
 
 \mainmatter
 

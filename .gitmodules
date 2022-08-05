@@ -1,3 +1,6 @@
 [submodule "kaobook"]
 	path = kaobook
 	url = git@github.com:sparusaurata/kaobook.git
+[submodule "latexamu-intro"]
+	path = latexamu-intro
+	url = git@github.com:sparusaurata/latexamu-intro.git
