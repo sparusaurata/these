@@ -139,6 +139,10 @@ acs-*.bib
 *.tikz
 *-tikzDictionary
 
+# knowledge
+*.kaux
+*.diagnose
+
 # listings
 *.lol
 
